@@ -1,0 +1,797 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Navigation Menu */
+nav {
+    background-color: #2c3e50;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #34495e;
+}
+
+/* Header Section */
+header {
+    background-color: #ecf0f1;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 2px solid #bdc3c7;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+header h2 {
+    font-weight: 400;
+    color: #7f8c8d;
+    margin-top: 10px;
+}
+
+header .links a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .links a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Sections */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+h3 {
+    color: #2980b9;
+    margin-bottom: 5px;
+}
+
+h4 {
+    margin-top: 0;
+    color: #7f8c8d;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.item {
+    margin-bottom: 25px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Project Media & Buttons */
+.project-links {
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1c5980;
+}
+
+.project-gallery {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.project-gallery figure {
+    margin: 0;
+    flex: 1 1 calc(33.333% - 15px);
+    min-width: 200px;
+    text-align: center;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+.project-gallery figcaption {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Internship Section Styles */
+.internship-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ecae-logo {
+    max-width: 100%;
+    height: auto;
+    width: 450px; /* Keeps the wide logo at a professional, readable size */
+}
+
+
+/* --- Senior Thesis Section Styles --- */
+
+.thesis-section {
+  padding: 4rem 1rem;
+  background-color: #f9fafb;
+  color: #333;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+.thesis-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.thesis-section .section-title {
+  font-size: 2.25rem;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 0.5rem;
+}
+
+.thesis-section h3 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.thesis-summary p, 
+.thesis-abstract p {
+  margin-bottom: 1.25rem;
+  text-align: justify;
+}
+
+/* Button Group Styling */
+.thesis-resources .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.thesis-section .btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #3b82f6;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.thesis-section .btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.thesis-section .btn-outline {
+  background-color: transparent;
+  color: #3b82f6;
+  border: 2px solid #3b82f6;
+}
+
+.thesis-section .btn-outline:hover {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+
+/* Results Gallery */
+.results-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.result-item {
+  margin: 0;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.result-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+.result-item figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Code Snippet Block */
+.thesis-code pre {
+  background-color: #1e293b;
+  color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.thesis-code code {
+  white-space: pre;
+}
+
+@media (max-width: 600px) {
+  .thesis-resources .button-group {
+    flex-direction: column;
+  }
+  
+  .thesis-section .btn {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+
+/* ==========================================================================
+   Teaching Experience Section Styles
+   ========================================================================== */
+
+.teaching-item {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.teaching-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.teaching-quote {
+    font-style: italic;
+    color: #555;
+    background-color: #f8f9fa;
+    border-left: 4px solid #0056b3; /* Update this hex code to match your site's primary color */
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-radius: 0 4px 4px 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.teaching-item p strong {
+    color: #333;
+    font-size: 1.05rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   Button Styles (If not already present in your CSS)
+   ========================================================================== */
+
+.project-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: #0056b3; /* Primary Color */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    background-color: #004494; /* Darker shade on hover */
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #0056b3;
+    border: 2px solid #0056b3;
+}
+
+.btn-outline:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+/* Base Layout & Typography */
+.projects-section {
+  padding: 4rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f9f9fb;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.section-divider {
+  border: 0;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 2.5rem 0;
+}
+
+/* Card Styling */
+.project-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* GitHub Repo Card Specifics */
+.github-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.github-card .card-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.github-card .card-header a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.github-card .card-header a:hover {
+  text-decoration: underline;
+}
+
+.github-card .card-body p {
+  line-height: 1.6;
+  color: #586069;
+  margin-bottom: 1rem;
+}
+
+.card-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #f1f8ff;
+  color: #0366d6;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* PDF Dropdown Styling */
+.custom-dropdown {
+  cursor: pointer;
+}
+
+.custom-dropdown summary {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  padding: 0.5rem 0;
+  list-style: none; /* Removes default triangle in some browsers */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Custom dropdown arrow */
+.custom-dropdown summary::after {
+  content: "▼";
+  font-size: 0.8rem;
+  color: #888;
+  transition: transform 0.2s ease;
+}
+
+.custom-dropdown[open] summary::after {
+  transform: rotate(180deg);
+}
+
+/* Hide default marker in webkit */
+.custom-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.pdf-list {
+  margin-top: 1rem;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pdf-list li a {
+  display: block;
+  padding: 0.75rem 1rem;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  color: #495057;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pdf-list li a:hover {
+  background-color: #e2e6ea;
+  color: #212529;
+  border-color: #dae0e5;
+}
+
+
+/* Honours & Certificates Section Styling */
+.certificates-section {
+  padding: 4rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.certificates-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.certificates-section .section-title {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Grid Layout */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Card Styling */
+.certificate-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Scholarship Highlight Card */
+.scholarship-card {
+  border-top: 4px solid #f1c40f; 
+}
+
+/* Image Container - Forces landscape proportions */
+.certificate-image {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Keeps all headers perfectly uniform */
+  background-color: #ffffff;
+  overflow: hidden;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Image behavior matching Python4Physics */
+.certificate-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Spans cleanly from edge-to-edge without gaps */
+  object-position: center;
+}
+
+/* Card Body & Typography */
+.certificate-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.certificate-body h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  line-height: 1.4;
+}
+
+.certificate-body p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.certificate-body .issuer, 
+.certificate-body .date {
+  font-size: 0.9rem;
+}
+
+.certificate-body .description {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Home Section Base Styling */
+.home-section {
+  padding: 5rem 1rem;
+  background-color: #f8f9fa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+.home-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start; /* Aligns items to the top cleanly */
+}
+
+/* Left Column: Image & Badges */
+.home-image-container {
+  flex: 1;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Ensures everything in this column left-aligns */
+}
+
+.profile-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eaeaea;
+  object-fit: cover;
+}
+
+.badge-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 4px; /* Squared slightly for a cleaner look */
+}
+
+.badge:first-child {
+  background-color: #f1c40f; 
+  color: #2c3e50;
+}
+
+/* Right Column: Text Information */
+.home-text-container {
+  flex: 2;
+  text-align: left; /* Explicitly forces left alignment */
+}
+
+.profile-name {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin: 0 0 0.25rem 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.profile-tagline {
+  font-size: 1.2rem;
+  color: #3498db;
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
+}
+
+.profile-bio p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 0 0 1.25rem 0;
+  text-align: left; /* Ensures paragraphs remain left-aligned */
+}
+
+/* Links within typography */
+.text-link {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.text-link:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Action Buttons */
+.profile-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Fixes button centering alignment */
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: #ffffff;
+  border: 1px solid #3498db;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #2c3e50;
+  border: 1px solid #cbd5e0;
+}
+
+.btn-secondary:hover {
+  background-color: #f7fafc;
+  border-color: #a0aec0;
+}
+
+/* Responsive adjustments for mobile viewports */
+@media (max-width: 868px) {
+  .home-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .home-image-container {
+    max-width: 100%; /* Allows image container to scale naturally */
+  }
+  
+  .profile-name {
+    font-size: 2rem;
+  }
+}
