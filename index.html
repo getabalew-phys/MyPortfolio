@@ -2,24 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Getabalew Manegerew Sewbekele | Physics Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- MathJax for rendering LaTeX -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
 
-<!-- SEO Meta Tags -->
+    <!-- Canonical -->
+    <link rel="canonical" href="https://getabalew-manegerew.netlify.app/">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Portfolio of Getabalew Manegerew Sewbekele, a Physicist and Computational Researcher based in Addis Ababa, Ethiopia. BSc Physics graduate from Addis Ababa University.">
     <meta name="keywords" content="Getabalew Manegerew Sewbekele, Physicist, Computational Research, Addis Ababa University, Physics Portfolio, Atmospheric Muons, Molecular Dynamics Simulation">
     <meta name="author" content="Getabalew Manegerew Sewbekele">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2c3e50">
 
     <!-- Open Graph / LinkedIn / Facebook -->
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Getabalew Manegerew Sewbekele | Physics Portfolio">
     <meta property="og:description" content="Portfolio of Getabalew Manegerew Sewbekele, a Physicist and Computational Researcher based in Addis Ababa, Ethiopia.">
-    <meta property="og:url" content="https://your-portfolio-url.com">
+    <meta property="og:url" content="https://getabalew-manegerew.netlify.app/">
+    <meta property="og:image" content="https://getabalew-manegerew.netlify.app/images/photo_2026-07-13_17-26-12.jpg">
     <meta property="profile:first_name" content="Getabalew">
     <meta property="profile:last_name" content="Manegerew Sewbekele">
 
@@ -27,6 +29,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Getabalew Manegerew Sewbekele | Physics Portfolio">
     <meta name="twitter:description" content="Physicist and Computational Researcher based in Addis Ababa. Explore my research, projects, and academic background.">
+    <meta name="twitter:image" content="https://getabalew-manegerew.netlify.app/images/photo_2026-07-13_17-26-12.jpg">
 
     <!-- JSON-LD Structured Data for Google Search -->
     <script type="application/ld+json">
@@ -52,22 +55,58 @@
     }
     </script>
 
+    <!-- MathJax for rendering LaTeX -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#research">Undergrad Research</a></li>
-            <li><a href="#internship">Internship</a></li>
-	    <li><a href="#senior-thesis-project">Senior Thesis</a></li>
-            <li><a href="#teaching">Teaching Assistant</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#honours">Honours</a></li>
-        </ul>
+
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <button id="menuToggle" class="menu-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="sideMenu" aria-label="Open menu">
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+            </button>
+
+            <a href="#home" class="nav-brand" data-section="home">Getabalew Manegerew</a>
+
+            <ul class="nav-links">
+                <li><a href="#home" data-section="home">Home</a></li>
+                <li><a href="#education" data-section="education">Education</a></li>
+                <li><a href="#research" data-section="research">Research</a></li>
+                <li><a href="#internship" data-section="internship">Internship</a></li>
+                <li><a href="#senior-thesis-project" data-section="senior-thesis-project">Thesis</a></li>
+                <li><a href="#teaching" data-section="teaching">Teaching</a></li>
+                <li><a href="#projects" data-section="projects">Projects</a></li>
+                <li><a href="#honors-certificates" data-section="honors-certificates">Honours</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <header id="home">
+    <div id="navBackdrop" class="nav-backdrop"></div>
+
+    <aside id="sideMenu" class="side-menu" aria-label="Section menu">
+        <div class="side-menu-header">
+            <span class="side-menu-title">Menu</span>
+            <button id="menuClose" class="menu-close" aria-label="Close menu">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <ul class="side-menu-list">
+            <li><a href="#home" data-section="home"><span class="side-menu-index">01</span>Home</a></li>
+            <li><a href="#education" data-section="education"><span class="side-menu-index">02</span>Education</a></li>
+            <li><a href="#research" data-section="research"><span class="side-menu-index">03</span>Undergrad Research</a></li>
+            <li><a href="#internship" data-section="internship"><span class="side-menu-index">04</span>Internship</a></li>
+            <li><a href="#senior-thesis-project" data-section="senior-thesis-project"><span class="side-menu-index">05</span>Senior Thesis</a></li>
+            <li><a href="#teaching" data-section="teaching"><span class="side-menu-index">06</span>Teaching Assistant</a></li>
+            <li><a href="#projects" data-section="projects"><span class="side-menu-index">07</span>Projects</a></li>
+            <li><a href="#honors-certificates" data-section="honors-certificates"><span class="side-menu-index">08</span>Honours</a></li>
+        </ul>
+    </aside>
+
+    <header>
         <h1>Getabalew Manegerew Sewbekele</h1>
         <h2>Physicist & Computational Researcher</h2>
         <p>Addis Ababa, Ethiopia | getabalew.manegerew-ug@aau.edu.et</p>
@@ -75,8 +114,10 @@
             <a href="https://github.com/getabalew-phys" target="_blank">GitHub</a> | 
             <a href="https://linkedin.com/in/getabalew-manegerew" target="_blank">LinkedIn</a>
         </div>
+    </header>
 
-	<section id="home" class="home-section">
+    <main>
+        <section id="home" class="page active home-section">
   <div class="container home-container">
     
     <!-- Profile Image Column -->
@@ -90,7 +131,7 @@
     
     <!-- Profile Text Column -->
     <div class="home-text-container">
-      <h1 class="profile-name">Getabalew Manegerew</h1>
+      <h2 class="profile-name">Getabalew Manegerew</h2>
       <p class="profile-tagline">Aspiring Theoretical Physicist</p>
       
       <div class="profile-bio">
@@ -125,10 +166,7 @@
     
   </div>
 </section>
-    </header>
-
-    <main>
-        <section id="education">
+        <section id="education" class="page">
             <h2>Education</h2>
             <div class="item">
                 <h3>Bachelor of Science in Physics</h3>
@@ -141,7 +179,7 @@
             </div>
         </section>
 
-        <section id="research">
+        <section id="research" class="page">
             <h2>Undergrad Research Team Led</h2>
             <div class="item">
                 <h3>Investigation of Atmospheric Muon Angular Flux Variation</h3>
@@ -174,7 +212,7 @@
             </div>
         </section>
 
-        <section id="internship">
+        <section id="internship" class="page">
             <h2>Internship</h2>
             <div class="item">
                 <div class="internship-header">
@@ -209,7 +247,7 @@
             </div>
         </section>
 
-        <section id="senior-thesis-project" class="thesis-section">
+        <section id="senior-thesis-project" class="page thesis-section">
             <div class="container">
                 <h2 class="section-title">Senior Thesis Project</h2>
                 
@@ -315,7 +353,7 @@ END DO loop5</code></pre>
             </div>
         </section>
 
-        <section id="teaching">
+        <section id="teaching" class="page">
             <h2>Teaching Experience</h2>
 
             <div class="item teaching-item">
@@ -335,7 +373,7 @@ END DO loop5</code></pre>
                 </ul>
 
                 <div class="project-links">
-                    <a href="papers/Recitation_note.pdf" target="_blank" class="btn">📄 Download Recitation Notes (PDF)</a>
+                    <a href="papers/Statistical_Mechanics_Recitation_Notes.pdf" target="_blank" class="btn">📄 Download Recitation Notes (PDF)</a>
                     <a href="https://github.com/getabalew-phys/statistical-mechanics" target="_blank" rel="noopener noreferrer" class="btn btn-outline">💻 GitHub Repository</a>
                 </div>
             </div>
@@ -357,12 +395,12 @@ END DO loop5</code></pre>
                 </ul>
 
                 <div class="project-links">
-                    <a href="papers/Guest_lecture.pdf" target="_blank" class="btn">📄 Download Guest Lecture Notes (PDF)</a>
+                    <a href="papers/Guest_Lecture_Thermodynamics.pdf" target="_blank" class="btn">📄 Download Guest Lecture Notes (PDF)</a>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="projects-section">
+        <section id="projects" class="page projects-section">
   <div class="container">
     <h2 class="section-title">Projects & Coursework</h2>
     
@@ -440,7 +478,7 @@ END DO loop5</code></pre>
   </div>
 </section>
 
-        <section id="honors-certificates" class="certificates-section">
+        <section id="honors-certificates" class="page certificates-section">
   <div class="container">
     <h2 class="section-title">Honours, Certificates & Scholarships</h2>
     
@@ -533,5 +571,100 @@ END DO loop5</code></pre>
         <p>&copy; 2026 Getabalew Manegerew Sewbekele. All rights reserved.</p>
     </footer>
 
+    <script>
+    (function () {
+        'use strict';
+
+        var pages = Array.prototype.slice.call(document.querySelectorAll('main > section.page'));
+        var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[data-section], .side-menu a[data-section]'));
+        var menuToggle = document.getElementById('menuToggle');
+        var menuClose = document.getElementById('menuClose');
+        var sideMenu = document.getElementById('sideMenu');
+        var backdrop = document.getElementById('navBackdrop');
+        var validIds = pages.map(function (p) { return p.id; });
+
+        function openMenu() {
+            sideMenu.classList.add('open');
+            backdrop.classList.add('open');
+            menuToggle.classList.add('is-active');
+            menuToggle.setAttribute('aria-expanded', 'true');
+            menuToggle.setAttribute('aria-label', 'Close menu');
+            document.body.classList.add('menu-open');
+        }
+
+        function closeMenu() {
+            sideMenu.classList.remove('open');
+            backdrop.classList.remove('open');
+            menuToggle.classList.remove('is-active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Open menu');
+            document.body.classList.remove('menu-open');
+        }
+
+        function showSection(id, pushHash) {
+            if (validIds.indexOf(id) === -1) {
+                id = 'home';
+            }
+
+            pages.forEach(function (sec) {
+                sec.classList.toggle('active', sec.id === id);
+            });
+
+            navLinks.forEach(function (link) {
+                link.classList.toggle('active', link.getAttribute('data-section') === id);
+            });
+
+            if (pushHash !== false) {
+                history.replaceState(null, '', '#' + id);
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            closeMenu();
+
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+        }
+
+        menuToggle.addEventListener('click', function () {
+            if (sideMenu.classList.contains('open')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        menuClose.addEventListener('click', closeMenu);
+        backdrop.addEventListener('click', closeMenu);
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeMenu();
+            }
+        });
+
+        navLinks.forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                showSection(link.getAttribute('data-section'));
+            });
+        });
+
+        var brand = document.querySelector('.nav-brand');
+        if (brand) {
+            brand.addEventListener('click', function (e) {
+                e.preventDefault();
+                showSection('home');
+            });
+        }
+
+        window.addEventListener('hashchange', function () {
+            showSection(location.hash.replace('#', ''), false);
+        });
+
+        var initialId = location.hash.replace('#', '') || 'home';
+        showSection(initialId, false);
+    })();
+    </script>
 </body>
 </html>
