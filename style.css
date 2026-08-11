@@ -45,7 +45,6 @@ body {
     color: #3498db;
 }
 
-/* Horizontal nav links — shown on desktop/PC, hidden on narrow screens */
 .nav-links {
     list-style: none;
     display: flex;
@@ -77,7 +76,6 @@ body {
     color: #ffffff;
 }
 
-/* Hamburger button — hidden on desktop, shown only on narrow screens */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -123,7 +121,6 @@ body {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Backdrop */
 .nav-backdrop {
     position: fixed;
     inset: 0;
@@ -139,7 +136,6 @@ body {
     visibility: visible;
 }
 
-/* Off-canvas side menu — slides in from the left */
 .side-menu {
     position: fixed;
     top: 0;
@@ -230,17 +226,11 @@ body {
     color: #2980b9;
 }
 
-/* ==========================================================================
-   Anchor Scroll Offset (keeps section headings clear of the sticky nav)
-   ========================================================================== */
 main > section[id],
 header {
     scroll-margin-top: 76px;
 }
 
-/* ==========================================================================
-   Smooth Mobile Scrolling & Touch Refinements
-   ========================================================================== */
 html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
@@ -267,7 +257,6 @@ img {
     height: auto;
 }
 
-/* Breakpoint: below this width, collapse the horizontal nav into the hamburger */
 @media (max-width: 860px) {
     .nav-links {
         display: none;
@@ -277,7 +266,6 @@ img {
     }
 }
 
-/* On desktop the off-canvas menu and its backdrop are never needed */
 @media (min-width: 861px) {
     .side-menu,
     .nav-backdrop {
@@ -325,19 +313,80 @@ header .links a:hover {
     text-decoration: underline;
 }
 
-/* Main Content Sections */
+/* ==========================================================================
+   Buttons — one consolidated definition, one primary color site-wide
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid transparent;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #3498db;
+    border: 2px solid #3498db;
+}
+
+.btn-outline:hover {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #2c3e50;
+    border: 1px solid #cbd5e0;
+}
+
+.btn-secondary:hover {
+    background-color: #f7fafc;
+    border-color: #a0aec0;
+}
+
+.profile-actions .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+}
+
+/* Main Content Sections — flat, no card boxes */
 main {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
 section {
-    background: white;
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 40px 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+main > section:last-of-type {
+    border-bottom: none;
 }
 
 h2 {
@@ -380,24 +429,12 @@ footer {
     margin-top: 40px;
 }
 
-/* Project Media & Buttons */
+/* Project Media */
 .project-links {
     margin: 20px 0;
-}
-
-.btn {
-    display: inline-block;
-    background-color: #2980b9;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #1c5980;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .project-gallery {
@@ -418,7 +455,6 @@ footer {
     width: 100%;
     height: auto;
     border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border: 1px solid #ddd;
 }
 
@@ -438,30 +474,29 @@ footer {
 .ecae-logo {
     max-width: 100%;
     height: auto;
-    width: 450px; /* Keeps the wide logo at a professional, readable size */
+    width: 450px;
 }
-
 
 /* --- Senior Thesis Section Styles --- */
 
 .thesis-section {
-  padding: 4rem 1rem;
-  background-color: #f9fafb;
+  padding: 4rem 0;
   color: #333;
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
 }
 
 .thesis-section .container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .thesis-section .section-title {
   font-size: 2.25rem;
   color: #111827;
   margin-bottom: 1.5rem;
-  border-bottom: 2px solid #3b82f6;
+  border-bottom: 2px solid #3498db;
   padding-bottom: 0.5rem;
 }
 
@@ -472,45 +507,17 @@ footer {
   margin-bottom: 1rem;
 }
 
-.thesis-summary p, 
+.thesis-summary p,
 .thesis-abstract p {
   margin-bottom: 1.25rem;
   text-align: justify;
 }
 
-/* Button Group Styling */
 .thesis-resources .button-group {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
-}
-
-.thesis-section .btn {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: #3b82f6;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: background-color 0.2s ease, transform 0.1s ease;
-}
-
-.thesis-section .btn:hover {
-  background-color: #2563eb;
-  transform: translateY(-2px);
-}
-
-.thesis-section .btn-outline {
-  background-color: transparent;
-  color: #3b82f6;
-  border: 2px solid #3b82f6;
-}
-
-.thesis-section .btn-outline:hover {
-  background-color: #eff6ff;
-  color: #1d4ed8;
 }
 
 /* Results Gallery */
@@ -523,10 +530,7 @@ footer {
 
 .result-item {
   margin: 0;
-  background: #ffffff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 0;
 }
 
 .result-item img {
@@ -544,7 +548,7 @@ footer {
   font-style: italic;
 }
 
-/* Results Table (Table 1: computed vs. theoretical values) */
+/* Results Table */
 .results-table-wrap {
   margin-top: 2rem;
   overflow-x: auto;
@@ -553,10 +557,6 @@ footer {
 .results-table {
   width: 100%;
   border-collapse: collapse;
-  background: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   font-size: 0.95rem;
 }
 
@@ -579,7 +579,7 @@ footer {
 }
 
 .results-table tbody tr:nth-child(even) {
-  background-color: #f9fafb;
+  background-color: #f5f6f8;
 }
 
 .table-caption {
@@ -610,13 +610,11 @@ footer {
   .thesis-resources .button-group {
     flex-direction: column;
   }
-  
-  .thesis-section .btn {
+  .thesis-resources .button-group .btn {
     text-align: center;
     width: 100%;
   }
 }
-
 
 /* ==========================================================================
    Teaching Experience Section Styles
@@ -638,7 +636,7 @@ footer {
     font-style: italic;
     color: #555;
     background-color: #f8f9fa;
-    border-left: 4px solid #0056b3; /* Update this hex code to match your site's primary color */
+    border-left: 4px solid #3498db;
     margin: 1.5rem 0;
     padding: 1rem 1.5rem;
     border-radius: 0 4px 4px 0;
@@ -653,57 +651,17 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-/* ==========================================================================
-   Button Styles (If not already present in your CSS)
-   ========================================================================== */
-
-.project-links {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    background-color: #0056b3; /* Primary Color */
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    border: 2px solid transparent;
-}
-
-.btn:hover {
-    background-color: #004494; /* Darker shade on hover */
-    transform: translateY(-2px);
-}
-
-.btn-outline {
-    background-color: transparent;
-    color: #0056b3;
-    border: 2px solid #0056b3;
-}
-
-.btn-outline:hover {
-    background-color: #0056b3;
-    color: #ffffff;
-}
-
 /* Base Layout & Typography */
 .projects-section {
-  padding: 4rem 1rem;
+  padding: 4rem 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f9f9fb;
   color: #333;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .section-title {
@@ -722,22 +680,12 @@ footer {
   margin: 2.5rem 0;
 }
 
-/* Card Styling */
+/* Project cards — flattened, no shadow/border box */
 .project-card {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  border: 1px solid #eaeaea;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eaeaea;
 }
 
-.project-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* GitHub Repo Card Specifics */
 .github-card .card-header {
   display: flex;
   align-items: center;
@@ -751,7 +699,7 @@ footer {
 }
 
 .github-card .card-header a {
-  color: #0366d6;
+  color: #2980b9;
   text-decoration: none;
 }
 
@@ -773,14 +721,13 @@ footer {
 
 .tag {
   background-color: #f1f8ff;
-  color: #0366d6;
+  color: #2980b9;
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
 }
 
-/* Subsection heading within Projects & Coursework */
 .subsection-title {
   font-size: 1.15rem;
   color: #2c3e50;
@@ -788,7 +735,6 @@ footer {
   font-weight: 700;
 }
 
-/* Featured Coursework Project Grid */
 .coursework-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -797,19 +743,14 @@ footer {
 
 .coursework-card {
   display: block;
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 1.25rem;
-  border: 1px solid #eaeaea;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #eaeaea;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
 .coursework-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   border-color: #3498db;
 }
 
@@ -841,7 +782,6 @@ footer {
   line-height: 1.55;
 }
 
-/* Additional (lighter-weight) coursework list */
 .additional-coursework-list {
   margin: 0;
   padding-left: 0;
@@ -854,7 +794,6 @@ footer {
 .additional-coursework-list li a {
   display: block;
   padding: 0.6rem 1rem;
-  background-color: #f8f9fa;
   border: 1px solid #e9ecef;
   border-radius: 6px;
   color: #495057;
@@ -864,23 +803,22 @@ footer {
 }
 
 .additional-coursework-list li a:hover {
-  background-color: #e2e6ea;
+  background-color: #f1f8ff;
   color: #212529;
-  border-color: #dae0e5;
+  border-color: #3498db;
 }
-
 
 /* Honours & Certificates Section Styling */
 .certificates-section {
-  padding: 4rem 1rem;
+  padding: 4rem 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #ffffff;
   color: #333;
 }
 
 .certificates-section .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .certificates-section .section-title {
@@ -892,55 +830,41 @@ footer {
   padding-bottom: 0.5rem;
 }
 
-/* Grid Layout */
 .certificates-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-/* Card Styling */
+/* Certificate cards — flattened */
 .certificate-card {
-  background: #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  border: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.certificate-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-/* Scholarship Highlight Card */
 .scholarship-card {
-  border-top: 4px solid #f1c40f; 
+  border-top: 3px solid #f1c40f;
+  padding-top: 1rem;
 }
 
-/* Image Container - Forces landscape proportions */
 .certificate-image {
   width: 100%;
-  aspect-ratio: 4 / 3; /* Keeps all headers perfectly uniform */
-  background-color: #ffffff;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
-  border-bottom: 1px solid #eaeaea;
 }
 
-/* Image behavior matching Python4Physics */
 .certificate-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Spans cleanly from edge-to-edge without gaps */
+  object-fit: cover;
   object-position: center;
+  border-radius: 6px;
 }
 
-/* Card Body & Typography */
 .certificate-body {
-  padding: 1.5rem;
+  padding-top: 1rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -959,7 +883,7 @@ footer {
   color: #555;
 }
 
-.certificate-body .issuer, 
+.certificate-body .issuer,
 .certificate-body .date {
   font-size: 0.9rem;
 }
@@ -973,8 +897,7 @@ footer {
 
 /* Home Section Base Styling */
 .home-section {
-  padding: 5rem 1rem;
-  background-color: #f8f9fa;
+  padding: 5rem 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: #333333;
 }
@@ -982,25 +905,24 @@ footer {
 .home-container {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   gap: 4rem;
-  align-items: flex-start; /* Aligns items to the top cleanly */
+  align-items: flex-start;
 }
 
-/* Left Column: Image & Badges */
 .home-image-container {
   flex: 1;
   max-width: 380px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Ensures everything in this column left-aligns */
+  align-items: flex-start;
 }
 
 .profile-photo {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid #eaeaea;
   object-fit: cover;
 }
@@ -1018,18 +940,17 @@ footer {
   padding: 0.4rem 0.8rem;
   font-size: 0.85rem;
   font-weight: 600;
-  border-radius: 4px; /* Squared slightly for a cleaner look */
+  border-radius: 4px;
 }
 
 .badge:first-child {
-  background-color: #f1c40f; 
+  background-color: #f1c40f;
   color: #2c3e50;
 }
 
-/* Right Column: Text Information */
 .home-text-container {
   flex: 2;
-  text-align: left; /* Explicitly forces left alignment */
+  text-align: left;
 }
 
 .profile-name {
@@ -1052,10 +973,17 @@ footer {
   line-height: 1.6;
   color: #4a5568;
   margin: 0 0 1.25rem 0;
-  text-align: left; /* Ensures paragraphs remain left-aligned */
+  text-align: left;
 }
 
-/* Links within typography */
+.cta-statement {
+  font-size: 1.05rem;
+  padding: 0.9rem 1.1rem;
+  background-color: #eef6fd;
+  border-left: 4px solid #3498db;
+  border-radius: 0 6px 6px 0;
+}
+
 .text-link {
   color: #3498db;
   text-decoration: none;
@@ -1068,58 +996,24 @@ footer {
   text-decoration: underline;
 }
 
-/* Action Buttons */
 .profile-actions {
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
   flex-wrap: wrap;
-  justify-content: flex-start; /* Fixes button centering alignment */
+  justify-content: flex-start;
 }
 
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.btn-primary {
-  background-color: #3498db;
-  color: #ffffff;
-  border: 1px solid #3498db;
-}
-
-.btn-primary:hover {
-  background-color: #2980b9;
-  border-color: #2980b9;
-}
-
-.btn-secondary {
-  background-color: #ffffff;
-  color: #2c3e50;
-  border: 1px solid #cbd5e0;
-}
-
-.btn-secondary:hover {
-  background-color: #f7fafc;
-  border-color: #a0aec0;
-}
-
-/* Responsive adjustments for mobile viewports */
 @media (max-width: 868px) {
   .home-container {
     flex-direction: column;
     gap: 2rem;
   }
-  
+
   .home-image-container {
-    max-width: 100%; /* Allows image container to scale naturally */
+    max-width: 100%;
   }
-  
+
   .profile-name {
     font-size: 2rem;
   }
