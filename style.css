@@ -372,21 +372,19 @@ header .links a:hover {
     border-radius: 6px;
 }
 
-/* Main Content Sections — flat, no card boxes */
+/* Main Content Sections — original width restored */
 main {
-    max-width: 1100px;
+    max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
 section {
-    padding: 40px 0;
-    margin-bottom: 0;
-    border-bottom: 1px solid #e2e2e2;
-}
-
-main > section:last-of-type {
-    border-bottom: none;
+    background: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 h2 {
@@ -455,6 +453,7 @@ footer {
     width: 100%;
     height: auto;
     border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border: 1px solid #ddd;
 }
 
@@ -480,16 +479,16 @@ footer {
 /* --- Senior Thesis Section Styles --- */
 
 .thesis-section {
-  padding: 4rem 0;
+  padding: 4rem 1rem;
+  background-color: #f9fafb;
   color: #333;
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
 }
 
 .thesis-section .container {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .thesis-section .section-title {
@@ -530,7 +529,10 @@ footer {
 
 .result-item {
   margin: 0;
-  padding: 0;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .result-item img {
@@ -557,6 +559,10 @@ footer {
 .results-table {
   width: 100%;
   border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   font-size: 0.95rem;
 }
 
@@ -579,7 +585,7 @@ footer {
 }
 
 .results-table tbody tr:nth-child(even) {
-  background-color: #f5f6f8;
+  background-color: #f9fafb;
 }
 
 .table-caption {
@@ -653,15 +659,15 @@ footer {
 
 /* Base Layout & Typography */
 .projects-section {
-  padding: 4rem 0;
+  padding: 4rem 1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f9f9fb;
   color: #333;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .section-title {
@@ -680,10 +686,19 @@ footer {
   margin: 2.5rem 0;
 }
 
-/* Project cards — flattened, no shadow/border box */
+/* Card Styling */
 .project-card {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid #eaeaea;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .github-card .card-header {
@@ -743,14 +758,19 @@ footer {
 
 .coursework-card {
   display: block;
-  padding: 1.25rem 0;
-  border-bottom: 1px solid #eaeaea;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.25rem;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .coursework-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   border-color: #3498db;
 }
 
@@ -794,6 +814,7 @@ footer {
 .additional-coursework-list li a {
   display: block;
   padding: 0.6rem 1rem;
+  background-color: #f8f9fa;
   border: 1px solid #e9ecef;
   border-radius: 6px;
   color: #495057;
@@ -803,22 +824,22 @@ footer {
 }
 
 .additional-coursework-list li a:hover {
-  background-color: #f1f8ff;
+  background-color: #e2e6ea;
   color: #212529;
-  border-color: #3498db;
+  border-color: #dae0e5;
 }
 
 /* Honours & Certificates Section Styling */
 .certificates-section {
-  padding: 4rem 0;
+  padding: 4rem 1rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
   color: #333;
 }
 
 .certificates-section .container {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .certificates-section .section-title {
@@ -836,23 +857,33 @@ footer {
   gap: 2rem;
 }
 
-/* Certificate cards — flattened */
+/* Card Styling */
 .certificate-card {
-  border-bottom: 1px solid #eaeaea;
-  padding-bottom: 1.5rem;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eaeaea;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .scholarship-card {
-  border-top: 3px solid #f1c40f;
-  padding-top: 1rem;
+  border-top: 4px solid #f1c40f;
 }
 
 .certificate-image {
   width: 100%;
   aspect-ratio: 4 / 3;
+  background-color: #ffffff;
   overflow: hidden;
+  border-bottom: 1px solid #eaeaea;
 }
 
 .certificate-image img {
@@ -860,11 +891,10 @@ footer {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 6px;
 }
 
 .certificate-body {
-  padding-top: 1rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -897,7 +927,8 @@ footer {
 
 /* Home Section Base Styling */
 .home-section {
-  padding: 5rem 0;
+  padding: 5rem 1rem;
+  background-color: #f8f9fa;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: #333333;
 }
@@ -905,7 +936,6 @@ footer {
 .home-container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
   display: flex;
   gap: 4rem;
   align-items: flex-start;
@@ -923,6 +953,7 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid #eaeaea;
   object-fit: cover;
 }
